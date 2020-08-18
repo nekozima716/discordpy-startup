@@ -6,7 +6,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 
 @bot.command()
 async def log(ctx,a=None,b=None):
-	ch = bot.get_channel(745178429388750848)
+	ch = bot.get_channel(728949181183688725)
 	now = datetime.datetime.now()
 	if int(a) >= int(b):
 		af = datetime.datetime(now.year,now.month,now.day-1,int(a)-9)
