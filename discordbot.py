@@ -6,6 +6,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 
 @bot.command()
 async def log(ctx,a=None,b=None):
+	ch = bot.get_channel(745178429388750848)
 	now = datetime.datetime.now()
 	if int(a) >= int(b):
 		af = datetime.datetime(now.year,now.month,now.day-1,int(a)-9)
@@ -14,7 +15,7 @@ async def log(ctx,a=None,b=None):
 	be = datetime.datetime(now.year,now.month,now.day,int(b)-9)
 	embed = discord.Embed(title=a+'時から'+b+'時の間に再生された音楽一覧',description=None,color=0xff0000)
 	c = 0
-	async for message in ctx.history(after=af,before=be):
+	async for message in ch.history(after=af,before=be):
 		if message.author.id == 235088799074484224:
 			if 'https://' in message.content:
 				c+=1
