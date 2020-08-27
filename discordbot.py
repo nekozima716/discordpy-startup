@@ -16,7 +16,7 @@ async def log(ctx,a=None,b=None):
 	embed = discord.Embed(title=a+'時から'+b+'時の間に再生された音楽一覧',description=None,color=0xff0000)
 	c = 0
 	async for message in ch.history(after=af,before=be):
-		if 'now' in message.content:
+		if 'Now' in message.content:
 			if message.author.id == 235088799074484224:
 				c+=1
 				embed.add_field(name=c,value=message.content[46:],inline=False)
