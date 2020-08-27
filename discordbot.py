@@ -17,7 +17,7 @@ async def log(ctx,a=None,b=None):
 	c = 0
 	async for message in ch.history(after=af,before=be):
 		if message.author.id == 235088799074484224:
-			if 'https://' not in message.content:
+			if 'https://' in message.content:
 				c+=1
 				embed.add_field(name=c,value=message.content[46:],inline=False)
 				
