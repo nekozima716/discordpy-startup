@@ -19,7 +19,7 @@ async def log(ctx,a=None,b=None):
 		if 'Now' in message.content:
 			if message.author.id == 235088799074484224:
 				c+=1	
-				embed.add_field(name=c,value=message.content[9:-6],inline=False)
+				embed.add_field(name=c,value=message.content[12:-6],inline=False)
 	await ctx.send(embed=embed)
 				
 		
