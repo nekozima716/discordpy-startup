@@ -18,10 +18,12 @@ async def log(ctx,a=None,b=None):
 	async for message in ch.history(after=af,before=be):
 		if 'Now' in message.content:
 			if message.author.id == 235088799074484224:
-				c+=1
-				embed.add_field(name=c,value=message.content,inline=False)
+				c+=1	
+				embed.add_field(name=c,value=message.content[7:],inline=False)
 	await ctx.send(embed=embed)
 				
+		
+		
 @bot.event
 async def on_member_join(member):
 	await member.send(f'{member.mention} こんにちは')
