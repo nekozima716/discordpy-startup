@@ -20,7 +20,7 @@ async def log(ctx,a=None,b=None):
 			if 'https://' in message.content:
 				c+=1
 				embed.add_field(name=c,value=message.content[46:],inline=False)
-				awaitctx.send(embed=embed)
+		await ctx.send(embed=embed)
 
 @bot.event
 async def on_member_join(member):
